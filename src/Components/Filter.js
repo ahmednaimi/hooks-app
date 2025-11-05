@@ -76,3 +76,5 @@ function Filter({ setFilter, addMovie }) {
 }
 
 export default Filter;
+
+ 

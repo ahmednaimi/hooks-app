@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 function MovieCard({ movie }) {
   return (
@@ -13,18 +12,14 @@ function MovieCard({ movie }) {
         boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
       }}
     >
-      <Link
-        to={`/movies/${movie.title}`}
-        style={{ textDecoration: "none", color: "inherit" }}
-      >
-        <img
-          src={movie.posterURL}
-          alt={movie.title}
-          style={{ width: "100%", borderRadius: "8px" }}
-        />
-        <h3>{movie.title}</h3>
-        <p>⭐ {movie.rating}</p>
-      </Link>
+      <img
+        src={movie.posterURL}
+        alt={movie.title}
+        style={{ width: "100%", borderRadius: "8px" }}
+      />
+      <h3>{movie.title}</h3>
+      <p>{movie.description}</p>
+      <p>⭐ {movie.rating}</p>
     </div>
   );
 }
